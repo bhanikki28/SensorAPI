@@ -40,7 +40,7 @@ public class DeviceDTO implements InitializingBean {
 	 * @throws ParseException
 	 */
 	public List<Device> getDevices() throws FileNotFoundException, IOException, ParseException {
-		logger.info("Populating the Device List");
+		logger.info("Ingestion of CSV Data starts here...");
 		ClassLoader classLoader = getClass().getClassLoader();
 
 		File file = new File(classLoader.getResource("data.csv").getFile());
@@ -63,7 +63,8 @@ public class DeviceDTO implements InitializingBean {
 
 			deviceList.add(record);
 		}
-		
+		logger.info("Ingestion of CSV Data completed and available for APIs to consume");
+
 		return deviceList;
 		
 	}
@@ -71,10 +72,8 @@ public class DeviceDTO implements InitializingBean {
 	
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		// TODO Auto-generated method stub
-		logger.info("After Properties set");
+		logger.info("Populating the Device List");
 		deviceList = getDevices();
-
 	}
 
 }
