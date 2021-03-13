@@ -20,25 +20,25 @@ URL :http://localhost:8095/device/list
 
 Method : POST
 
-Sample Payload_1:
-{
-    "sensor_type":"NUMBER"
-}
+	Sample Payload_1:
+	{
+	    "sensor_type":"NUMBER"
+	}
 
-Sample Payload_2:
+	Sample Payload_2:
+	
+	{
+	    "sensor_name":"FAN_STATUS",
+	    "sensor_type":"BOOLEAN"
+	}
 
-{
-    "sensor_name":"FAN_STATUS",
-    "sensor_type":"BOOLEAN"
-}
-
-Sample Payload_3:
-
-{
-    "device_name":"_AHU1_MAIN",
-    "sensor_name":"FAN_STATUS",
-    "sensor_type":"BOOLEAN"
-}
+	Sample Payload_3:
+	
+	{
+	    "device_name":"_AHU1_MAIN",
+	    "sensor_name":"FAN_STATUS",
+	    "sensor_type":"BOOLEAN"
+	}
 
 
 
