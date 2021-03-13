@@ -91,13 +91,13 @@ public class SensorReadController {
 		logger.info("Device List ModelSize" + deviceList.size());
 
 		for (String filterKey : keyList) {
-			logger.info("Querying the filterlist based on key:" + filterKey);
-			logger.info("Querying the filterlist based on value:" + filterMap.get(filterKey));
+			logger.info("Querying the list based on key:" + filterKey);
+			logger.info("Querying the list based on value:" + filterMap.get(filterKey));
 
 			deviceList = deviceList.stream()
 					.filter(DevicePredicates.getPredicate(filterKey, filterMap.get(filterKey).toString()))
 					.collect(Collectors.toList());
-			logger.info("Temp List Size after applying filter{},size{}" + filterKey + ":" + deviceList.size());
+			logger.info("Device List Size after applying filter{},size{}" + filterKey + ":" + deviceList.size());
 		}
 		return deviceList;
 
